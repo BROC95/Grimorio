@@ -22,6 +22,7 @@ from grimorio.views import index
 from grimorio.views import magos
 from grimorio.views import delete
 from grimorio.views import update
+from grimorio.views import all
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,5 +31,6 @@ urlpatterns = [
     path('get/', magos, name='magos'),
     path('del/', delete, name='del'),
     path('update/', update, name='update'),
+    path('all/', all, name='all'),
 ]
 # path('grimorio/', ,

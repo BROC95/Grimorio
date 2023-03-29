@@ -106,3 +106,11 @@ def magos(request):
         return HttpResponse(JsonResponse(data))
     else:
         return HttpResponse("Not response")
+
+
+def all(request):
+    # a1 = Mago.objects.select_related('grimorio').all()
+    a2 = Grimorio.objects.select_related('mago_id').all()
+    print(a2.values())
+
+    return HttpResponse(a2)
