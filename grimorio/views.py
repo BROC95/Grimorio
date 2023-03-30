@@ -90,11 +90,11 @@ def update(request):
     return HttpResponse(asGri)
 
 
-def index(request):
+def grimorio(request):
     if request.method == "GET":
         response = Grimorio.objects.all()
         data = {"Grimorio": list(response.values())}
-        return HttpResponse(JsonResponse(data))
+        return JsonResponse(data)
     else:
         return HttpResponse("Not response")
 
@@ -103,14 +103,26 @@ def magos(request):
     if request.method == "GET":
         response = Mago.objects.all()
         data = {"Mago": list(response.values())}
-        return HttpResponse(JsonResponse(data))
+        # return HttpResponse(JsonResponse(data))
+        return JsonResponse(data)
     else:
         return HttpResponse("Not response")
 
 
 def all(request):
-    # a1 = Mago.objects.select_related('grimorio').all()
-    a2 = Grimorio.objects.select_related('mago_id').all()
-    print(a2.values())
 
-    return HttpResponse(a2)
+    magos = Grimorio.objects.select_related('mago_id').all()
+    # print(a2.values())
+
+    return HttpResponse(magos)
+
+
+def index(request):
+
+    response = """get/magos/ 
+                get/grimorio/ 
+                all/ 
+                post/ 
+                update/ 
+                del/"""
+    return HttpResponse(response)

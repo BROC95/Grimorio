@@ -18,19 +18,20 @@ from django.urls import path
 
 
 from grimorio.views import envio
-from grimorio.views import index
+from grimorio.views import grimorio
 from grimorio.views import magos
 from grimorio.views import delete
 from grimorio.views import update
 from grimorio.views import all
+from grimorio.views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('post/', envio, name='envio'),
     path('', index, name='index'),
-    path('get/', magos, name='magos'),
-    path('del/', delete, name='del'),
+    path('get/magos/', magos, name='magos'),
+    path('get/grimorio/', grimorio, name='magos'),  # Metodos get
+    path('all/', all, name='all'),  # Metodos post o patch
+    path('post/', envio, name='envio'),
     path('update/', update, name='update'),
-    path('all/', all, name='all'),
+    path('del/', delete, name='del'),  # Metodo delete
 ]
-# path('grimorio/', ,

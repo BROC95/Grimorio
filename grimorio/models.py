@@ -18,6 +18,7 @@ class Mago(models.Model):
 
 
 class Grimorio(models.Model):
+
     grimo = models.CharField(max_length=255)
     front = models.CharField(max_length=255)
     mago_id = models.ForeignKey(
