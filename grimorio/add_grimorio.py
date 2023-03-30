@@ -4,9 +4,9 @@ import secrets
 import string
 
 class asignacion:
-    """
-    Esta clase asigna la afinidad magica, grimorio, portada y id
-    """"
+   # """
+   #Esta clase asigna la afinidad magica, grimorio, portada y id
+   #""""
 
     def __init__(self):
         pass
