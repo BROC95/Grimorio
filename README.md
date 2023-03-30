@@ -115,4 +115,4 @@ Be used [github](https://github.com/) for controll of version.
 
 ## Develop ✒️
 
-* **Breyner Ocampo Cardenas** - _Trabajo Inicial_ - [villanuevand](https://github.com/broc95)
+* **Breyner Ocampo Cardenas** - [broc95](https://github.com/broc95)
