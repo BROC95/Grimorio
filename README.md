@@ -40,7 +40,7 @@ pip install -r requiriments.txt
 
 Ready this part, continue with  django process, how migrate database and run server
 
-First, you will have  that are make migrations of the model a to database
+First, you will have  that are make migrations of the model a to database (Postgres), the database configuration is in the .env file
 
 ```python
 python manage.py makemigrations
